@@ -1,0 +1,37 @@
+{
+    "name": "gurucomkz/watermark",
+    "type": "silverstripe-vendormodule",
+    "description": "Watermarking the images upon output in SilverStripe",
+    "keywords": [
+        "silverstripe",
+        "watermarking",
+        "watermark",
+        "image"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Shevchenko",
+            "homepage": "https://github.com/gurucomkz"
+        }
+    ],
+    "require": {
+        "silverstripe/vendor-plugin": "^1.0"
+    },
+    "require-dev": {
+    },
+    "extra": {
+        "expose": [
+        ],
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Gurucomkz\\Watermark\\": "src/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}

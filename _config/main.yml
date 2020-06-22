@@ -1,0 +1,16 @@
+---
+Name: watermark
+After:
+    - 'assetsimage'
+---
+SilverStripe\Assets\Storage\DBFile:
+  extensions:
+    - Gurucomkz\Watermark\ImageExtension
+
+SilverStripe\Assets\Image:
+  extensions:
+    - Gurucomkz\Watermark\ImageExtension
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Gurucomkz\Watermark\SiteConfigExtension
