@@ -32,11 +32,12 @@ class ImageExtension extends DataExtension {
         return $posmap[$pos];
     }
 
-    public function Watermark($position = 'Bottom')
+    public function Watermark($position = null)
     {
         $image = $this->owner;
 
         $siteConfig = SiteConfig::current_site_config();
+        $position = $position?:$siteConfig->WatermarkPosition;
 
         if (!$image && $this->owner->record instanceof Image) {
             $image = $this->owner->record;
@@ -74,7 +75,7 @@ class ImageExtension extends DataExtension {
         $wmYOffset = $siteConfig->WatermarkYOffset;
 
         $backendAnchor = self::ssPos2BackendPos($position);
-        $variant = $image->variantName(__FUNCTION__, $wmXOffset, $wmYOffset, $wmW, $wmH, $position);
+        $variant = $image->variantName(__FUNCTION__, $wmXOffset, $wmYOffset, $wmW, $wmH, $position, $watermark->ID);
         return $image->manipulateImage($variant, function (Image_Backend $backend) use ($wmXOffset, $wmYOffset, $watermarkResource, $backendAnchor) {
             // Cloning logic is taken from InterventionBackend::createCloneWithResource()
 

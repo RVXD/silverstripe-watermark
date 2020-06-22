@@ -12,7 +12,7 @@ use SilverStripe\ORM\DataExtension;
 
 class SiteConfigExtension extends DataExtension {
     private static $db = [
-        'WatermarkPosition' => 'Enum("Top,Right,Left,Center,TopLeft,TopRight,BottomRight,BottomLeft","BottomRight")',
+        'WatermarkPosition' => 'Enum("Top,Right,Bottom,Left,Center,TopLeft,TopRight,BottomRight,BottomLeft","BottomRight")',
         'WatermarkMaxWidth' => 'Int',
         'WatermarkMaxHeight' => 'Int',
         'WatermarkXOffset' => 'Int',
