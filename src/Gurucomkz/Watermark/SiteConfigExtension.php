@@ -27,7 +27,6 @@ class SiteConfigExtension extends DataExtension {
     ];
 
     public function updateCMSFields(FieldList $fields) {
-        $fields->removeByName('Tagline');
         $fields->addFieldsToTab('Root.Watermarking', [
             UploadField::create('WatermarkImage'),
             DropdownField::create('WatermarkPosition','Watermark position',$this->owner->dbObject('WatermarkPosition')->enumValues()),
