@@ -10,6 +10,9 @@ SilverStripe\Assets\Storage\DBFile:
 SilverStripe\Assets\Image:
   extensions:
     - Gurucomkz\Watermark\ImageExtension
+SilverStripe\AssetAdmin\Forms\ImageFormFactory:
+  extensions:
+    - Gurucomkz\Watermark\ImageFormFactoryExtension
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
