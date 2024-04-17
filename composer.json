@@ -15,9 +15,6 @@
             "homepage": "https://github.com/gurucomkz"
         }
     ],
-    "require": {
-        "silverstripe/vendor-plugin": "^1.0"
-    },
     "require-dev": {
     },
     "extra": {
